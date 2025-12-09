@@ -1,0 +1,1058 @@
+/* ============================================================ */
+/* 1. TODAS AS VARIÁVEIS DE CORES ENCONTRADAS (CONSOLIDADAS)    */
+/* ============================================================ */
+:root {
+    /* --- CONJUNTO 1: Cores Institucionais --- */
+    --azul-header: #002d62;
+    --azul-footer: #0a1f3d;
+    --verde-info: #17a2b8;
+    --amarelo-imp: #f0ad4e;
+    --azul-games: #4a90e2;
+
+    /* --- CONJUNTO 2: Cores Layout / Pastéis --- */
+    --primary-blue: #003380;
+    --accent-blue: #0056b3;
+    --pastel-blue: #bbd3e7;
+    --pastel-green: #6edcd9;
+    --pastel-yellow: #fce181;
+    --pastel-dark-blue: #7daecf;
+    --pastel-blue-dark: #7daecf; 
+    --pastel-green-light: #70d6c8;
+    --pastel-gray: #dcebf7;
+
+    /* --- CONJUNTO 3: Cores Game Mania --- */
+    --gm-blue: #003399;
+    --gm-dark: #001a4d;
+    --gm-accent: #ffc107;
+    --gm-accent-hover: #e0a800;
+    --text-main: #333333;
+    --text-light: #ffffff;
+    --text-muted: #6c757d;
+
+    /* Gradientes Game Mania */
+    --grad-teal-1: #00cba9; --grad-teal-2: #00a8cc;
+    --grad-orange-1: #ffb300; --grad-orange-2: #ff8c00;
+    --grad-games-1: #7aaeff; --grad-games-2: #2e7acc;
+}
+
+/* ================= GERAL ================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Mantido o fundo cinza claro predominante */
+    color: var(--text-main);
+}
+
+.section-title {
+    color: #003366; /* Ou var(--azul-header) dependendo da preferência */
+    font-weight: 700;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.text-primary-dark {
+    color: var(--primary-blue);
+}
+
+/* ================= HEADER / NAVBAR ================= */
+.bg-custom-blue {
+    background-color: #004080; /* Valor hex mantido, conflita levemente com var(--primary-blue) mas mantive o original */
+}
+
+.top-header {
+    background-color: var(--primary-blue);
+}
+
+/* Ajuste da barra de busca */
+.search-form input,
+.search-bar input {
+    border-radius: 0 20px 20px 0;
+}
+
+.search-form .input-group-text,
+.search-bar span {
+    border-radius: 20px 0 0 20px;
+    background-color: white;
+}
+
+.search-bar {
+    width: 40%;
+}
+
+.shapes {
+    font-family: monospace;
+    color: #00d2ff;
+}
+
+/* ================= BANNER / CARROSSEL ================= */
+.banner-img {
+    height: 350px;
+    object-fit: cover;
+}
+
+.banner-gradient {
+    background: linear-gradient(90deg, #005c97 0%, #363795 100%);
+    border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--verde-info);
+    border-radius: 50%;
+    padding: 20px;
+    background-size: 50%, 50%;
+}
+
+/* ================= CATEGORIAS (Cards Grandes) ================= */
+.card-categoria {
+    border-radius: 25px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card-categoria:hover,
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.category-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    min-height: 100px;
+}
+
+.icon-area {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.8;
+}
+
+/* --- Cores Específicas dos Cards (Conjunto 1) --- */
+.cat-informatica { background-color: var(--verde-info); }
+.cat-impressoras { background-color: var(--amarelo-imp); }
+.cat-games { background: linear-gradient(90deg, #89cff0 0%, var(--azul-header) 100%); }
+
+/* --- Cores Específicas dos Cards (Conjunto 2 - Pastéis) --- */
+.bg-pastel-blue { background-color: #c4d8f2; }
+.bg-pastel-green { background-color: #5fcfcf; }
+.bg-pastel-yellow { background-color: #f0d571; }
+.bg-pastel-dark-blue { background-color: #6fa8cc; }
+.bg-pastel-blue-dark { background-color: #6fa8cc; }
+.bg-pastel-green-light { background-color: #5fcfcf; }
+.bg-pastel-gray { background-color: #c4d8f2; }
+
+/* ================= CATEGORIAS (Botões/Pílulas) ================= */
+.btn-cat {
+    border-radius: 50px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    color: white; /* Cor base definida num bloco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cat:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: white !important;
+}
+
+/* --- Cores dos Botões (Conjunto 3) --- */
+/* Azul Claro */
+.cat-blue { background-color: #c4d8f2; }
+.cat-blue:hover { color: #c4d8f2 !important; border-color: #c4d8f2; }
+
+/* Verde Água (Teal) */
+.cat-teal { background-color: #04bfad; }
+.cat-teal:hover { color: #04bfad !important; border-color: #04bfad; }
+
+/* Amarelo */
+.cat-yellow { background-color: #f2b705; }
+.cat-yellow:hover { color: #f2b705 !important; border-color: #f2b705; }
+
+/* Azul Escuro */
+.cat-dark-blue { background-color: #2173A6; }
+.cat-dark-blue:hover { color: #2173A6 !important; border-color: #2173A6; }
+
+/* Cinza */
+.cat-gray { background-color: #6c757d; }
+.cat-gray:hover { color: #6c757d !important; border-color: #6c757d; }
+
+/* ================= PRODUTOS ================= */
+.product-card {
+    transition: all 0.3s ease;
+    background-color: #fdfdfd;
+}
+
+.product-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+    transform: translateY(-5px);
+}
+
+.product-card .text-primary {
+    color: #0056b3 !important;
+}
+
+.btn-comprar {
+    background-color: #f0ad4e;
+    border: none;
+    border-radius: 20px;
+}
+.btn-comprar:hover {
+    background-color: #ec971f;
+    color: white;
+}
+
+/* ================= FOOTER ================= */
+.bg-custom-dark {
+    background-color: var(--azul-footer);
+}
+
+.site-footer {
+    background-color: #00234f;
+    color: white;
+    font-size: 18px;
+}
+
+.site-footer h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.site-footer a,
+.footer-link {
+    color: white; /* ou #ccc do footer-link original */
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+    line-height: 2;
+}
+
+.site-footer a:hover,
+.footer-link:hover {
+    color: #f0b92d;
+    text-decoration: underline; /* Mistura dos estilos */
+    transform: scale(1.05);
+}
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer li {
+    margin-bottom: 4px; 
+}
+
+.footer-column {
+    margin: 10px 15px;
+    min-width: 200px;
+}
+
+.footer-top, .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px 20px;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    border-top: 1px solid #1a3a64;
+}
+
+/* --- Call to Action no Footer --- */
+.footer-cta {
+    background-color: #b0c4de;
+    color: #00234f;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.footer-cta h3 {
+    color: #00234f;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    background-color: #f0b92d;
+    color: #00234f;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+    text-decoration: none;
+}
+
+/* --- Símbolos / Ícones --- */
+.playstation-symbols {
+    display: flex;
+    gap: 15px;
+    font-size: 2rem;
+    color: var(--verde-info);
+}
+
+.symbol-circle {
+    width: 30px; height: 30px;
+    border: 3px solid #fff; /* ou #b0c4de do outro estilo */
+    border-radius: 50%;
+    display: inline-block;
+    color: #b0c4de; /* Caso seja usado como fonte de icone */
+}
+
+.symbol-triangle {
+    width: 0; height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #f0ad4e;
+    display: inline-block;
+    color: #f0b92d;
+}
+
+.symbol-square {
+    width: 30px; height: 30px;
+    border: 3px solid #17a2b8; /* ou #329485 */
+    display: inline-block;
+    color: #329485;
+}
+
+.social-icons a {
+    font-size: 1.8em;
+    margin-right: 20px;
+    color: #34b3a0;
+}
+.social-icons a:hover { color: #2a8f81; }
+
+.payment-icons i {
+    font-size: 1.8em;
+    margin-right: 20px;
+    color: white;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 991px) {
+    .search-box { margin: 15px 0; }
+    .icons-menu {
+        margin-top: 10px;
+        justify-content: flex-start !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------- */
+/* 🧩 VARIÁVEIS DE CORES E FONTES PADRONIZADAS */
+/* ------------------------------------------------------------- */
+:root {
+  /* CORES PRINCIPAIS E MARCA */
+  --color-dark-blue: #00234f; /* Azul Escuro Principal (Rodapé / Base) */
+  --color-medium-blue: #004080; /* Azul Médio (Navbar / Títulos / Header Base) */
+  --color-light-blue: #a6cbf3; /* Azul Claro (Botões de Categoria / Fundo Hero) */
+  --color-teal-primary: #04bfad; /* Verde-Água (Destaque / Botões / Ícones Sociais) */
+  --color-yellow-cta: #f0b92d; /* Amarelo (CTA - Call to Action) */
+
+  /* CORES DE FUNDO E TEXTO */
+  --color-background: #f8f9fa; /* Fundo cinza claro */
+  --color-text-primary: #003366; /* Cor principal para títulos (Dark Blue mais claro) */
+  --color-text-dark: #333; /* Cor padrão para textos (quase preto) */
+  --color-gray-soft: #e9ecef; /* Cor de fundo dos inputs */
+  --color-border-light: #ddd; /* Cor de borda leve */
+
+  /* FONTES */
+  --font-primary: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-logo: "Press Start 2P", cursive;
+}
+
+/* ------------------------------------------------------------- */
+/* 🌐 ESTILOS GERAIS E RESET */
+/* ------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--font-primary);
+  color: var(--color-text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+/* Unificação dos containers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* ------------------------------------------------------------- */
+/* ⚙️ COMPONENTES GERAIS */
+/* ------------------------------------------------------------- */
+
+/* Título de Seção (usado em .section-title e .page-title) */
+.section-title,
+.page-title {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.section-title {
+  border-bottom: 2px solid var(--color-border-light);
+}
+
+/* Divisor */
+.divider {
+  border-top: 2px solid var(--color-border-light);
+  opacity: 1;
+  margin: 30px 0;
+}
+
+/* Mensagem de Destaque */
+.success-message {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+.illustration-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* ------------------------------------------------------------- */
+/* 🔝 CABEÇALHO E NAVBAR (Preferência ao padrão de e-commerce/Bootstrap) */
+/* ------------------------------------------------------------- */
+
+.bg-custom-blue {
+  background-color: var(--color-medium-blue) !important;
+  padding-bottom: 10px;
+}
+
+.logo-font {
+  font-family: var(--font-logo);
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: white !important;
+  text-shadow: 2px 2px 0px #000;
+}
+
+/* Barra de Busca */
+.search-form .input-group {
+  max-width: 500px;
+  display: flex; /* Garante que os elementos fiquem lado a lado */
+}
+.search-form .input-group-text {
+  border-radius: 20px 0 0 20px;
+  background-color: white;
+  border: none; /* Simplificação: remove a borda padrão do input-group-text */
+  padding: 8px 12px;
+}
+.search-form input {
+  border-radius: 0 20px 20px 0;
+  border: none;
+  box-shadow: none !important;
+  padding: 8px 15px;
+  width: 100%;
+  outline: none;
+}
+/* Revertendo a busca do segundo bloco para a mesma classe */
+.search-bar {
+  display: none; /* Inicialmente oculta em mobile, como na media query original */
+}
+
+/* ------------------------------------------------------------- */
+/* 🛒 PRODUTOS E BOTÕES DE AÇÃO */
+/* ------------------------------------------------------------- */
+
+/* Card de Produto */
+.product-card {
+  transition: all 0.3s ease;
+  background-color: #fdfdfd;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-5px);
+}
+
+/* Preço em destaque */
+.product-card .text-primary {
+  color: #0056b3 !important; /* Mantido o azul mais forte para o preço */
+}
+
+/* Botão de Compra (Amarelo) */
+.btn-comprar {
+  background-color: var(--color-yellow-cta); /* Usando variável CTA */
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  color: white;
+  padding: 10px 20px;
+}
+.btn-comprar:hover {
+  background-color: #ec971f; /* Amarelo um pouco mais escuro no hover */
+  color: white;
+}
+
+/* ------------------------------------------------------------- */
+/* 🏷️ CATEGORIAS (Botões Coloridos) */
+/* ------------------------------------------------------------- */
+
+.btn-cat {
+  border-radius: 50px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white !important;
+}
+
+/* Cores e Efeitos de Hover para cada categoria (Cores padronizadas) */
+.cat-blue {
+  background-color: var(
+    --color-light-blue
+  ); /* #a6cbf3 original, ajustado para similaridade */
+  color: var(--color-text-);
+}
+.cat-blue:hover {
+  color: var(--color-light-blue) !important;
+  border-color: var(--color-light-blue);
+}
+
+.cat-teal {
+  background-color: var(--color-teal-primary);
+}
+.cat-teal:hover {
+  color: var(--color-teal-primary) !important;
+  border-color: var(--color-teal-primary);
+}
+
+.cat-yellow {
+  background-color: var(--color-yellow-cta);
+}
+.cat-yellow:hover {
+  color: var(--color-yellow-cta) !important;
+  border-color: var(--color-yellow-cta);
+}
+
+/* Mantidas cores customizadas para as categorias */
+.cat-dark-blue {
+  background-color: #2173a6;
+}
+.cat-dark-blue:hover {
+  color: #2173a6 !important;
+  border-color: #2173a6;
+}
+
+.cat-gray {
+  background-color: #2173A6;
+}
+.cat-gray:hover {
+  color: #2173A6 !important;
+  border-color: #2173A6;
+}
+
+/* ------------------------------------------------------------- */
+/* 🏠 PÁGINA 'EMPRESA' / HERO E CONTEÚDO */
+/* ------------------------------------------------------------- */
+
+.hero-section {
+  background: linear-gradient(
+    to bottom,
+    var(--color-light-blue) 0%,
+    var(--color-medium-blue) 100%
+  );
+  height: 300px;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.pixel-title {
+  font-family: var(--font-logo);
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.main-content-wrapper {
+  margin-top: -60px;
+  position: relative;
+  z-index: 10;
+}
+
+.content-card {
+  border-radius: 30px !important;
+}
+
+.section-text {
+  color: var(--color-text-dark);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+
+/* ------------------------------------------------------------- */
+/* 👤 FORMULÁRIO DE CADASTRO */
+/* ------------------------------------------------------------- */
+
+.main-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.avatar-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.avatar-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* Cor gradiente inspirada no teal */
+  background: linear-gradient(
+    135deg,
+    var(--color-teal-primary) 0%,
+    #00a08e 100%
+  );
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 10px rgba(0, 191, 165, 0.3);
+}
+
+.icon-user {
+  font-size: 70px;
+  color: #ffc107; /* Amarelo de destaque para o ícone */
+}
+
+/* Regras de Layout do Formulário (Pré-Bootstrap Grid) */
+.form-cadastro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+}
+.form-full-width {
+  flex-basis: 100%;
+}
+.form-half-width {
+  flex-basis: calc(50% - 10px);
+}
+.form-row {
+  width: 100%;
+}
+
+.form-cadastro input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-gray-soft);
+  font-size: 16px;
+  color: var(--color-text-dark);
+  outline: none;
+  font-family: var(--font-primary);
+}
+
+.form-cadastro input::placeholder {
+  color: #6c757d;
+  font-weight: 400;
+}
+/* Estilo específico para input de data que tem comportamento diferente */
+#dataNascimento[type="text"] {
+  color: #6c757d;
+}
+
+.btn-salvar-informacoes {
+  background-color: var(--color-teal-primary);
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-salvar-informacoes:hover {
+  background-color: #00a08e;
+}
+
+/* ------------------------------------------------------------- */
+/* ⬇️ RODAPÉ (FOOTER) - Preferência ao padrão de e-commerce/complexo */
+/* ------------------------------------------------------------- */
+
+.site-footer {
+  background-color: var(--color-dark-blue);
+  color: white;
+  padding: 40px 0 0; /* Ajuste para ter espaço acima */
+  font-size: 18px;
+}
+
+.site-footer h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.site-footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.site-footer a:hover {
+  color: var(--color-yellow-cta);
+  transform: scale(1.05); /* Efeito de destaque ao passar o mouse */
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-footer li {
+  margin-bottom: 8px; /* Aumentado um pouco o espaçamento */
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15px 20px;
+}
+.footer-column {
+  /* Estilo para coluna de rodapé no desktop */
+  padding: 0 15px;
+}
+
+/* Símbolos Geométricos (Unificados com as cores originais) */
+.symbol-circle {
+  color: #b0c4de;
+  font-size: 2.3em;
+}
+.symbol-triangle {
+  color: var(--color-yellow-cta);
+  font-size: 3.2em;
+}
+.symbol-square {
+  color: #329485;
+  font-size: 4.1em;
+}
+
+/* Seção CTA (Fale Conosco) */
+.footer-cta {
+  background-color: #b0c4de;
+  color: var(--color-dark-blue);
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 20px; /* Adiciona espaçamento superior */
+}
+
+.footer-cta h3 {
+  color: var(--color-dark-blue);
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.footer-cta h3 i {
+  margin-right: 8px;
+}
+
+.cta-button {
+  background-color: var(--color-yellow-cta);
+  color: var(--color-dark-blue);
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+/* Redes Sociais e Pagamento */
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15px 20px;
+  border-top: 1px solid #1a3a64; /* Mantida a borda do copyright */
+}
+.social-icons a {
+  font-size: 1.8em;
+  margin-right: 20px;
+  color: var(--color-teal-primary); /* Usando variável teal */
+}
+.social-icons a:hover {
+  color: #2a8f81;
+}
+.payment-icons i {
+  font-size: 1.8em;
+  margin-right: 20px;
+  color: white;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 0.9em;
+}
+
+/* ------------------------------------------------------------- */
+/* 📱 RESPONSIVIDADE (MEDIA QUERIES) */
+/* ------------------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+  /* NAV: Ajustes para tablet/mobile (Menu Desktop Oculto) */
+  .desktop-menu {
+    display: none;
+  }
+  .search-form .input-group {
+    max-width: 100%;
+  }
+  .bg-custom-blue {
+    padding-bottom: 0;
+  }
+
+  /* Hero */
+  .pixel-title {
+    font-size: 1.8rem;
+  }
+  .hero-section {
+    height: 220px;
+  }
+  .main-content-wrapper {
+    margin-top: -40px;
+  }
+
+  /* Formulário (Reverte para colunas simples) */
+  .form-cadastro {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .form-half-width {
+    flex-basis: 100%;
+  }
+
+  /* Rodapé */
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-column {
+    min-width: auto;
+    width: 100%;
+    margin: 15px 0;
+  }
+  .footer-cta,
+  .social-icons,
+  .payment-icons {
+    justify-content: center;
+  }
+  .footer-bottom {
+    border-top: none; /* Remove a borda no mobile, se estiver usando a estrutura de cima */
+  }
+}
+
+@media (max-width: 767px) {
+  /* Títulos */
+  .pixel-title {
+    font-size: 1.5rem;
+  }
+  .success-message,
+  .page-title {
+    font-size: 1.5em;
+  }
+}
+
+/* Ajuste a classe do título da página */
+.page-title {
+  /* Mantém a cor e o tamanho do título */
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 30px;
+  margin-top: 40px; /* Garante que haja espaço após a Navbar */
+
+  /* Remove o padding-left de 20px se ele estiver empurrando para o canto */
+  padding-left: 0;
+}
+
+.illustration-container {
+  text-align: center;
+}
+
+.voltar {
+  text-align: center;
+}
+/* Se você também quer que a ilustração e a mensagem fiquem mais afastadas */
+.container-content {
+  /* Adiciona um padding interno para afastar o conteúdo das bordas da tela */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+
+
+.btn-cat,
+.btn-cat i {
+    color: white !important; /* Força a cor branca em todos os elementos e seus ícones */
+}
+
+
+
+.product-card {
+    position: relative;
+}
+
+.list-group-item {
+    border-left: none;
+    border-right: none;
+    padding: 15px 10px;
+}
+
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.badge {
+    font-size: 0.7em;
+    padding: 0.35em 0.65em;
+}
+
+#lista-sugestoes {
+    max-height: 200px;
+    overflow-y: auto;
+    
+    /* Faz a lista "descolar" um pouquinho da barra de pesquisa */
+    margin-top: 8px; 
+    
+    /* Aqui define o arredondamento (20px fica bem redondo) */
+    border-radius: 20px; 
+    
+    /* Garante que o item da lista não "corte" a borda redonda */
+    overflow: hidden; 
+    
+    /* Borda suave em volta */
+    border: 1px solid #e0e0e0; 
+}
+
+/* Ajuste fino para o primeiro e último item respeitarem a curva */
+#lista-sugestoes .list-group-item:first-child {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#lista-sugestoes .list-group-item:last-child {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Efeito ao passar o mouse (Hover) */
+#lista-sugestoes .list-group-item:hover {
+    background-color: #f0f8ff; /* Um azul bem clarinho */
+    color: #0d6efd; /* Texto fica azul */
+}
+
+/* Ícone de relógio ou lupa */
+.icone-historico {
+    color: #adb5bd;
+    margin-right: 12px;
+}
+
+/* Estilo para quando o campo estiver com erro */
+.input-erro {
+    border: 2px solid #ff0000 !important; /* Borda vermelha */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Brilho vermelho */
+    animation: tremer 0.3s ease-in-out; /* Animação */
+}
+
+/* Estilo do texto "Resposta obrigatória" */
+.msg-erro {
+    color: #ff0000;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Animação para tremer o campo */
+@keyframes tremer {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
